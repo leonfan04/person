@@ -17,12 +17,10 @@ public class HeapSort {
     public static void heapSort(Person[] arr) {
         int n = arr.length;
 
-        // Построение max-heap
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(arr, n, i);
         }
 
-        // Извлечение элементов из max-heap и сортировка
         for (int i = n - 1; i > 0; i--) {
             Person temp = arr[0];
             arr[0] = arr[i];
